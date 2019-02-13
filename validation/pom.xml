@@ -12,4 +12,11 @@
     <name>demo</name>
     <description>Demo project for Spring Boot</description>
 
+    <dependencies>
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+    </dependencies>
 </project>

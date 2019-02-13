@@ -19,6 +19,7 @@
     <modules>
         <module>projects</module>
         <module>tasks</module>
+        <module>validation</module>
     </modules>
 
     <properties>
@@ -29,13 +30,13 @@
 
     <repositories>
         <repository>
-            <id>jcenter</id>
-            <url>https://jcenter.bintray.com/</url>
-        </repository>
-        <repository>
             <id>spring-milestones</id>
             <name>Spring Milestones</name>
             <url>https://repo.spring.io/milestone</url>
+        </repository>
+        <repository>
+            <id>jcenter</id>
+            <url>https://jcenter.bintray.com/</url>
         </repository>
     </repositories>
 

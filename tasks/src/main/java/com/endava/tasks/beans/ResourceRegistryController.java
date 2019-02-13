@@ -1,4 +1,4 @@
-package com.endava.projects.beans;
+package com.endava.tasks.beans;
 
 import io.crnk.core.engine.registry.RegistryEntry;
 import io.crnk.core.engine.registry.ResourceRegistry;
@@ -10,7 +10,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @RestController
-public class ResourceRegestryController {
+public class ResourceRegistryController {
 
     @Autowired
     private ResourceRegistry resourceRegistry;

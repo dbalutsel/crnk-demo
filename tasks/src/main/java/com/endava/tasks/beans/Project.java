@@ -3,8 +3,10 @@ package com.endava.tasks.beans;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.crnk.core.resource.annotations.*;
 import io.crnk.core.resource.links.DefaultSelfLinksInformation;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
 
 import java.util.List;
+
 
 @JsonApiResource(type = "project")
 public class Project {
@@ -15,9 +17,9 @@ public class Project {
 	@JsonProperty
 	private String name;
 
-	@JsonApiRelation(serialize = SerializeType.EAGER, lookUp = LookupIncludeBehavior.AUTOMATICALLY_WHEN_NULL,
-			repositoryBehavior = RelationshipRepositoryBehavior.FORWARD_OPPOSITE, opposite = "project")
-	private List<Task> task;
+//	@JsonApiRelation(serialize = SerializeType.EAGER, lookUp = LookupIncludeBehavior.AUTOMATICALLY_WHEN_NULL,
+//			repositoryBehavior = RelationshipRepositoryBehavior.FORWARD_OPPOSITE, opposite = "project")
+//	private List<Task> task;
 	/**
 	 * Links information necessary on objects to maintain urls from original microservice.
 	 */
@@ -56,11 +58,11 @@ public class Project {
 		this.links = links;
 	}
 
-	public List<Task> getTask() {
-		return task;
-	}
-
-	public void setTask(List<Task> task) {
-		this.task = task;
-	}
+//	public List<Task> getTask() {
+//		return task;
+//	}
+//
+//	public void setTask(List<Task> task) {
+//		this.task = task;
+//	}
 }

@@ -5,3 +5,21 @@ crnk:
   max-page-limit: 1000
   allow-unknown-attributes: false
   return404-on-null: true
+  security:
+    enabled: false
+server:
+  port: 8081
+spring:
+  datasource:
+    url: "jdbc:postgresql://localhost:5432/projects"
+    username: "postgres"
+    password: "mysecretpassword"
+    driver-class-name: "org.postgresql.Driver"
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database-platform: "org.hibernate.dialect.PostgreSQL9Dialect"
+    properties:
+      hibernate:
+        temp:
+          use_jdbc_metadata_defaults: false

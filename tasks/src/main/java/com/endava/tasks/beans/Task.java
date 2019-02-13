@@ -4,21 +4,31 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import io.crnk.core.resource.annotations.*;
 import io.crnk.core.resource.links.DefaultSelfLinksInformation;
 
-@JsonApiResource(type = "task")
+import javax.persistence.*;
+
+@Entity
+@Table(name = "t_task", schema = "public")
+//@JsonApiResource(type = "task")
 public class Task {
 
-	@JsonApiId
+	@Id
+	@GeneratedValue(strategy = GenerationType.SEQUENCE)
+	//@JsonApiId
 	private Long id;
 
-	@JsonProperty
+	//@JsonProperty
+	@Column(name = "name")
 	private String name;
 
 	@JsonApiRelationId
+	@Column(name = "project_id")
 	private Long projectId;
 
+	@Transient
 	@JsonApiRelation(serialize = SerializeType.ONLY_ID, lookUp = LookupIncludeBehavior.AUTOMATICALLY_WHEN_NULL)
 	private Project project;
 
+	@Transient
 	@JsonApiLinksInformation
 	private DefaultSelfLinksInformation links = new DefaultSelfLinksInformation();
 
